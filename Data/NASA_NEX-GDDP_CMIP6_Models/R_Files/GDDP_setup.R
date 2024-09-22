@@ -122,9 +122,12 @@ NCfile_check_mAtl<-function(destname, path){
     try ({
     nc_close(nc.test)	# close connection with file so new one can be written
     })
+  
   ## LOAD DATA AS RASTER BRICK, CROP, WRITE TO NEW FILE
     ncfname=destname
     tasmax.brick <- brick(ncfname,varname=varID)
+    
+  ## INSERT CROP EXTENT HERE (REPLACE "ATL")
     #tasmax.crop <- crop(tasmax.brick , extent(230, 295, 20, 50))  # CONUS
     atl=c(270,287,30,43)
     tasmax.crop <- crop(tasmax.brick , extent(atl))  # MD, VA, NC, SC
