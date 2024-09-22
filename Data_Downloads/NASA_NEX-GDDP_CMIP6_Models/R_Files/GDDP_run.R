@@ -1,7 +1,10 @@
-##
+## MAKE SURE TO RUN GDDP SETUP FILE BEFORE RUNNING THIS CODE
 ##
 ## Code to run GDDP download for given model id(s)
-##
+## 
+
+# Code to run setup file
+# source("./GDDP_setup.R")
 
 ## Specify working directory and initialize files
 setwd(filepathbase)
